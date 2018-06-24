@@ -1,0 +1,11 @@
+<mat-card class="input-card">
+  <mat-form-field *ngIf="maxLength">
+    <input matInput #input maxlength="250" [placeholder]="placeholder" (keyup.enter)="onSubmit()" [(ngModel)]="text">
+    <mat-hint align="end">{{input.value?.length || 0}}/{{maxLength}}</mat-hint>
+  </mat-form-field>
+  <mat-form-field *ngIf="!maxLength">
+    <input matInput #input [placeholder]="placeholder" (keyup.enter)="onSubmit()" [(ngModel)]="text">
+  </mat-form-field>
+
+  <button *ngIf="buttonEnabled" mat-raised-button [disabled]="text.length === 0" (click)="onSubmit()">{{buttonText}}</button>
+</mat-card>

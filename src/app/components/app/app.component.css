@@ -1,0 +1,13 @@
+.content-area {
+  margin-top: 25px;
+  height: 93%;
+  overflow-y: auto;
+}
+
+.input-card {
+  margin: 16px;
+}
+
+mat-form-field {
+  width: 100%;
+}

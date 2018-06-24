@@ -1,0 +1,9 @@
+<mat-list role="list">
+  <mat-list-item *ngFor="let item of items" role="listitem">
+    <mat-card>
+      <mat-checkbox class="example-margin" [(ngModel)]="item.done">
+        <span [class.done]="item.done">{{item.text}}</span>
+      </mat-checkbox>
+    </mat-card>
+  </mat-list-item>
+</mat-list>

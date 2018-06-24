@@ -1,0 +1,12 @@
+mat-list-item {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+mat-card {
+  width: 100%;
+}
+
+.done {
+  text-decoration-line: line-through;
+}

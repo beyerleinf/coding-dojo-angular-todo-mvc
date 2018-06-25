@@ -1,6 +1,7 @@
-# Todo
+# Coding Dojo Angular TODO MVC
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This is an example app to show case MVC with Angular.
+It was created for a team internal coding dojo about Node.js. []()
 
 ## Development server
 

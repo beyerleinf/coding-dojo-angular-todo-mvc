@@ -1,4 +1,5 @@
 export class TodoItem {
-  done?: boolean;
-  text: string;
+  id?: string;
+  state?: boolean;
+  name: string;
 }

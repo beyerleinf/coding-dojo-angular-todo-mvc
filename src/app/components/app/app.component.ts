@@ -10,14 +10,31 @@ export class AppComponent implements OnInit {
 
   constructor(private todoService: TodoService) {}
 
-  ngOnInit(): void {}
-
-  addItem(text: string): void {
-    this.todoService.addTodo({text});
+  ngOnInit(): void {
     this.getTodos();
   }
 
+  addItem(text: string): void {
+    this.todoService.addTodo({name: text, state: false}).subscribe(() => {
+      this.getTodos();
+    });
+  }
+
   getTodos(): void {
-    this.todos = this.todoService.getTodos();
+    this.todoService.getTodos().subscribe((res) => {
+      this.todos = res;
+    });
+  }
+
+  deleteTodo(id: string): void {
+    this.todoService.deleteTodo(id).subscribe(() => {
+      this.getTodos();
+    });
+  }
+
+  updateTodo(event: {id: string, state: boolean}): void {
+    this.todoService.updateTodo(event.id, event.state).subscribe(() => {
+      this.getTodos();
+    });
   }
 }

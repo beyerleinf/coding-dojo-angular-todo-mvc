@@ -7,6 +7,10 @@ mat-card {
   width: 100%;
 }
 
+button {
+  float: right;
+}
+
 .done {
   text-decoration-line: line-through;
 }

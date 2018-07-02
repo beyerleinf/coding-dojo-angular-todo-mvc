@@ -8,5 +8,10 @@
     <app-input (submit)="addItem($event)" [placeholder]="'What do you need to do?'" [maxLength]="250" [buttonEnabled]="true"
       [buttonText]="'Add'"></app-input>
   </div>
-  <app-todo-list [items]="todos"></app-todo-list>
+  <app-todo-list [items]="todos" (delete)="deleteTodo($event)" (update)="updateTodo($event)" *ngIf="todos || (todos && todos.length > 0); else noTodos"></app-todo-list>
+  <ng-template #noTodos>
+    <mat-card class="input-card">
+      <span>You have nothing to do :)</span>
+    </mat-card>
+  </ng-template>
 </div>

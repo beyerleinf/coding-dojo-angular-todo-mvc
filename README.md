@@ -1,5 +1,7 @@
 # Coding Dojo Angular TODO MVC
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/beyerleinf/coding-dojo-angular-todo-mvc.svg)](https://greenkeeper.io/)
+
 This is an example app to show case MVC with Angular.
 It was created for a team internal coding dojo about Node.js. []()
 
